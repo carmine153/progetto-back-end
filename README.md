@@ -1,6 +1,6 @@
 # Polling Application API
 
-**Studente:** Carmine Pignatiello
+**Studente:** Carmine Pignatiello 
 
 ## Informazioni Progetto
 - **Tipo di progetto:** REST API
