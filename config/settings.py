@@ -136,5 +136,6 @@ REST_FRAMEWORK = {
 
 AUTH_USER_MODEL = 'accounts.CustomUser'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
+CSRF_COOKIE_HTTPONLY = False
+CSRF_TRUSTED_ORIGINS = ['https://progetto-back-end.onrender.com']
 
