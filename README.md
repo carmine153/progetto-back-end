@@ -33,10 +33,10 @@ Applicazione per la gestione di sondaggi online. Il sistema permette agli utenti
 - **Contenuto:** Il database include i dati demo generati tramite lo script `seed_data.py`.
 
 ## Account Demo
-| Username | Password | Ruolo | Token |
+| Username | Password | Ruolo | Token(render) |
 | :--- | :--- | :--- |
-| `admin_demo` | `admin12345` | Amministratore | 'c08108e69ea2e55aa269766ebcc347ce606b829c'|
-| `user_demo` | `user12345` | Utente Standard | '93a112a22924466021713a6e7dc2016fff56ccbd' |
+| `admin_demo` | `admin12345` | Amministratore | '5d32dc7104bf9997845fba2177fb72bf4f0008ff'|
+| `user_demo` | `user12345` | Utente Standard | '3c98508aba1fb63f0cca199ea41235d97deebea6' |
 
 ## Online Deployment
 ## 🔗 Link al Progetto
