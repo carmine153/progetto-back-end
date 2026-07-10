@@ -11,7 +11,6 @@ class Command(BaseCommand):
         
         FIXED_TOKENS = {
             'user-demo': '93a112a22924466021713a6e7dc2016fff56ccbd',
-            'carmine': '387112285bbbd5c3f8428de46969c314d458ded0',
             'admin_demo': 'c08108e69ea2e55aa269766ebcc347ce606b829c',
         }
 
