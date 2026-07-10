@@ -1,6 +1,6 @@
 # Polling Application API
 
-**Studente:** Carmine Pignatiello 
+**Studente:** Carmine Pignatiello
 
 ## Informazioni Progetto
 - **Tipo di progetto:** REST API
@@ -33,13 +33,19 @@ Applicazione per la gestione di sondaggi online. Il sistema permette agli utenti
 - **Contenuto:** Il database include i dati demo generati tramite lo script `seed_data.py`.
 
 ## Account Demo
-| Username | Password | Ruolo |
+| Username | Password | Ruolo | Token |
 | :--- | :--- | :--- |
-| `admin_demo` | `admin12345` | Amministratore |
-| `user_demo` | `user12345` | Utente Standard |
+| `admin_demo` | `admin12345` | Amministratore | 'c08108e69ea2e55aa269766ebcc347ce606b829c'|
+| `user_demo` | `user12345` | Utente Standard | '93a112a22924466021713a6e7dc2016fff56ccbd' |
 
 ## Online Deployment
-- [Link al progetto online]: *[Inserisci qui il link al deployment, es. Render/PythonAnywhere]*
+- [Link al progetto online]: https://progetto-back-end.onrender.com
+
+# Esempio per votare al sondaggio 1 (Scegliendo l'opzione con ID 2) da terminale render
+curl -X POST https://[URL]/api/polls/1/vote/ \
+     -H "Authorization: Token [TOKEN]" \
+     -H "Content-Type: application/json" \
+     -d '{"choice_id": 2}'
 
 ## API Endpoints
 | Metodo | URL | Auth | Ruolo | Descrizione |
@@ -50,7 +56,7 @@ Applicazione per la gestione di sondaggi online. Il sistema permette agli utenti
 | `GET` | `/api/polls/{id}/results/` | No | Tutti | Risultati sondaggio |
 | `DELETE` | `/api/polls/{id}/` | Sì | Owner | Cancella sondaggio |
 
-*Nota: Per i campi JSON (request body), inviare oggetti strutturati secondo il modello (es. `{"title": "Titolo", "question_text": "Domanda"}`).*
+
 
 ## Utilizzo con HTTPie
 Per testare le API da terminale tramite HTTPie:
