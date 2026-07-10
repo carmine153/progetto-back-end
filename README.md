@@ -40,7 +40,7 @@ Applicazione per la gestione di sondaggi online. Il sistema permette agli utenti
 
 ## Online Deployment
 ## 🔗 Link al Progetto
-Puoi accedere all'applicazione online qui:
+Render:
 [https://progetto-back-end.onrender.com](https://progetto-back-end.onrender.com)
 
 # Esempio per votare al sondaggio 1 (Scegliendo l'opzione con ID 2) da terminale render
