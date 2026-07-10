@@ -5,7 +5,7 @@ from rest_framework.authtoken.models import Token
 User = get_user_model()
 
 class Command(BaseCommand):
-    help = 'Assicura che gli utenti abbiano i token predefiniti senza errori'
+    help = 'Crea o aggiorna i token per gli utenti specificati'
 
     def handle(self, *args, **options):
         FIXED_TOKENS = {
@@ -16,16 +16,14 @@ class Command(BaseCommand):
         for username, key in FIXED_TOKENS.items():
             user = User.objects.filter(username=username).first()
             if user:
-                
-                token = Token.objects.filter(user=user).first()
-                
-                if token:
-                    if token.key != key:
-                        token.key = key
-                        token.save()
-                        self.stdout.write(f"Token aggiornato per: {username}")
+                token, _ = Token.objects.get_or_create(user=user)
+                if token.key != key:
+                    token.key = key
+                    token.save()
+                    self.stdout.write(f"Token aggiornato per: {username}")
                 else:
-                    Token.objects.create(user=user, key=key)
-                    self.stdout.write(f"Token creato per: {username}")
-        
-        self.stdout.write(self.style.SUCCESS("Operazione completata con successo!"))
+                    self.stdout.write(f"Token già corretto per: {username}")
+            else:
+                self.stdout.write(self.style.WARNING(f"Utente non trovato nel database: {username}"))
+
+        self.stdout.write(self.style.SUCCESS("Operazione completata!"))
