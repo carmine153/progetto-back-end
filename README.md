@@ -35,8 +35,8 @@ Applicazione per la gestione di sondaggi online. Il sistema permette agli utenti
 ## Account Demo
 | Username | Password | Ruolo | Token(render) |
 | :--- | :--- | :--- |
-| `admin_demo` | `admin12345` | Amministratore | '5d32dc7104bf9997845fba2177fb72bf4f0008ff'|
-| `user_demo` | `user12345` | Utente Standard | '3c98508aba1fb63f0cca199ea41235d97deebea6' |
+| `admin_demo` | `admin12345` | Amministratore | '9df480db34bba0a3fa022e8cd7da6ab0f0b79a9a'|
+| `user_demo` | `user12345` | Utente Standard | '8114fc7362abc8073da1d8beb84ad57cbcf30829' |
 
 ## Online Deployment
 ## 🔗 Link al Progetto
